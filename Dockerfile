@@ -6,7 +6,7 @@ RUN apt-get update
 
 ENV PATH="/:${PATH}"
 ENV TF_IN_AUTOMATION="TRUE"
-COPY --from=eu.gcr.io/ply-test-deploy/testgt:master ./testgt .
+COPY --from=eu.gcr.io/ply-test-deploy/testgt:master ./testgt /testgt
 #COPY --from=eu.gcr.io/ply-test-deploy/testgt:master /testgt/project-setup.sh /testgt/project-setup.sh
 #COPY --from=eu.gcr.io/ply-test-deploy/testgt:master /testgt/*.tf /testgt/*.tf
 COPY ./dev.tfvars /testgt/
