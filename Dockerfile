@@ -11,6 +11,6 @@ COPY --from=eu.gcr.io/ply-test-deploy/testgt:master ./testgt .
 #COPY --from=eu.gcr.io/ply-test-deploy/testgt:master /testgt/*.tf /testgt/*.tf
 COPY ./dev.tfvars /testgt/
 RUN ls -lrt
-RUN pwd
+RUN ls testgt
 
 ENTRYPOINT ["./testgt/project-setup.sh"]
